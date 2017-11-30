@@ -1,1 +1,36 @@
 {{outlet}}
+<div class="blogList pageContent">
+    <p class="imageHeader contactHeader">
+        Get In Touch
+    </p>
+    <div class="contentWrapper">
+        <h1>Contact Smith&nbsp;And&nbsp;Williams</h1>
+        <p class="phrase">If you need Smith And Williams assistance in the digitalisaton of your business or simply want to have a drink, contact
+            us.
+        </p>
+        {{#validated-form on-submit = (action "submit") as |f|}}
+
+        <div class="fieldsRow">
+
+            <p>{{#f.input name="firstName"}}
+                <input type="text" id="firstName" name="firstName" required="required">
+                <label for="firstName">First name</label>{{/f.input}}</p>
+            <p>{{#f.input name="lastName"}}
+                <input type="text" id="lastName" name="lastName" required="optional">
+                <label for="lastName">Last name</label> {{/f.input}}</p>
+
+            <p>{{#f.input name="email"}}
+                <input type="email" id="email" name="email" required="required">
+                <label for="email">Email</label>{{/f.input}}</p>
+
+        </div>
+        <p> {{f.input type="textarea" label="Message" name="message"}}</p>
+
+        <p>{{f.input type="checkbox" label="Check if you want to receive further message from Smith And Williams" name="optin"}}
+        </p>
+        <p>{{f.submit label="Send"}} </p>
+
+        {{/validated-form}}
+    </div>
+
+</div>
