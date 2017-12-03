@@ -462,6 +462,7 @@
             display: flex;
             justify-content: space-between;
             p {
+              line-height: 1.1em;
               cursor: text;
               position: relative;
               flex-basis: 30%;
@@ -477,16 +478,51 @@
                 width: 100%;
                 &:focus {
                   border-bottom-color: $emberA400;
-                }
-                &:focus~label,
-                &:valid~label {
+                } // &:focus~label,
+                // &:valid~label {
+                //   top: -20px;
+                //   font-size: 16px;
+                // }
+                &.focused~label {
                   top: -20px;
                   font-size: 16px;
                 }
+                &.primary~label {
+                  color: lime!important;
+                  top: -20px;
+                }
+              }
+              .errorMsg {
+                font-size: 16px;
+                color: $red500;
+                display: none;
+                margin-top: 4px;
+              }
+              &.error {
+                label {
+                  color: $red500;
+                }
+                input,
+                input:focus {
+                  border-bottom-color: $red500;
+                }
+                .errorMsg {
+                  display: block;
+                }
+              }
+              &.textarea {
+                flex-basis: 100%;
+                textarea {
+                  border: 0px solid #fff;
+                  border-bottom: 2px solid $grey600;
+                  width: 100%;
+                  outline: none;
+                }
+                label {}
               }
             }
           }
-        }
+        } //form
       } //pageContent
       footer {
         transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
