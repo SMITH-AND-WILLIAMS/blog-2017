@@ -12,33 +12,34 @@
 
         <div class="fieldsRow">
 
-            <p class="error">{{#f.input name="firstName" }} {{input type="text" id="firstName" name="firstName" required="required" focus-in=(action
-                "focus" true ) focus-out=(action "focus" false ) class=(if focused "focused" ) }}
-                <label for="firstName">First name</label>{{/f.input}}
+            <p class="error">{{#f.input name="firstName" }}            
+         
+                {{material-input type="text" materialId="firstName" required="required" name="firstName" label="First name"}}
+                {{/f.input}}
                 <span class="errorMsg">This field can't be empty</span>
             </p>
-            <p>{{#f.input name="lastName"}} {{input type="text" id="lastName" name="lastName" required="required" focus-in=(action
-                "focus" true ) focus-out=(action "focus" false ) class=(if focused "focused" ) }}
-                <label for="lastName">Last name</label> {{/f.input}}
+            <p>{{#f.input name="lastName"}} 
+                 {{material-input type="text" materialId="lastName" required="required" name="lastName" label="Last name"}}  
+                {{/f.input}}
                 <span class="errorMsg">This field can't be empty</span>
             </p>
 
-            <p>{{#f.input name="email"}} {{input type="email" id="email" name="email" required="required" focus-in=(action "focus"
-                true ) focus-out=(action "focus" false ) class=(if focused "focused" ) }}
-                <label for="email">Email</label>{{/f.input}}
+            <p>{{#f.input name="email"}} 
+                  {{material-input type="email" materialId="email" required="required" name="email" label="Email"}}  
+               {{/f.input}}
                 <span class="errorMsg">This field can't be empty</span>
             </p>
 
         </div>
         <div class="fieldsRow">
-            <p class="textarea">{{#f.input name="message"}} {{f.input type="textarea" name="message" id="message" focus-in=(action "focus" true)
-                focus-out=(action "focus" false) class=(if focused "focused" )}}
-                <label for="message">Message</label>{{/f.input}}</p>
+            <p class="textarea">{{#f.input name="message"}}
+                {{material-input type="textarea" materialId="message" required="required" name="message" label="Message"}}
+                {{/f.input}}</p>
         </div>
 
         <p>{{f.input type="checkbox" label="Check if you want to receive further message from Smith And Williams" name="optin"}}
         </p>
-        <p>{{f.submit label="Send"}} </p>
+        <p>{{f.submit label="Send" class="button"}} </p>
 
         {{/validated-form}}
     </div>
