@@ -1,5 +1,6 @@
   @import 'variables';
-  @import "normalize";
+  @import 'normalize';
+  @import 'components/material-input';
    ::-moz-selection {
     background: $ember200;
     text-shadow: none;
@@ -39,8 +40,7 @@
         line-height: 36px;
         display: inline-block;
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-        
-        border:0;
+        border: 0;
         &:hover {
           box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
           background: $brown900;
@@ -446,28 +446,14 @@
             }
           } //contenWrapper
         } //bloglist
-       
         form {
           label {
             color: $grey800;
-            display: block;
-            transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
-           
-              cursor:pointer;
-           
-          }
-          input[type="text"],
-          input[type="tel"],
-          input[type="email"] {
-            border: 0;
-            border-bottom: 2px solid $grey600;
-            outline: none;
-            transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
           }
           .fieldsRow {
             display: flex;
             justify-content: space-between;
-            p {
+            div {
               line-height: 1.1em;
               cursor: text;
               position: relative;
@@ -476,80 +462,42 @@
                 position: absolute;
                 pointer-events: none;
                 top: 0;
-                &.open {
-                  top: -20px;
-                  font-size: 16px;
-                }
               }
               input {
                 width: 100%;
-   
-   
-                &:focus {
-                  border-bottom-color: $emberA400;
-                } // &:focus~label,
-                // &:valid~label {
-                //   top: -20px;
-                //   font-size: 16px;
-                // }
-                &.focused~label {
-                  top: -20px;
-                  font-size: 16px;
-                }
-                &.primary~label {
-                  color: lime!important;
-                  top: -20px;
-                }
               }
-          
               .errorMsg {
                 font-size: 16px;
                 color: $red500;
                 display: none;
                 margin-top: 4px;
               }
-              &.error {
-                label {
-                  color: $red500;
-                }
-                input,
-                input:focus {
-                  border-bottom-color: $red500;
-                }
-                .errorMsg {
-                  display: block;
-                }
-              }
               &.textarea {
                 flex-basis: 100%;
                 textarea {
-                  border: 0px solid #fff;
-                  border-bottom: 2px solid $grey600;
-                  width: 100%;
-                  outline: none;
+                  // border: 0px solid #fff;
+                  // border-bottom: 2px solid $grey600;
+                  // width: 100%;
+                  // outline: none;
                   &:focus {
-                    border-bottom-color: $emberA400;
-                  } // &:focus~label,
-                  // &:valid~label {
-                  //   top: -20px;
-                  //   font-size: 16px;
-                  // }
+                    //     border-bottom-color: $emberA400;
+                  }
                   &.focused~label {
-                    top: -20px;
-                    font-size: 16px;
+                    // top: -20px;
+                    // font-size: 16px;
                   }
                   &.primary~label {
-                    color: lime!important;
-                    top: -20px;
+                    // color: lime!important;
+                    // top: -20px;
                   }
                 }
               }
-              
             }
           }
-          .button{
-            min-width:100px;
-          font-weight:bold;          }
+          .button {
+            min-width: 100px;
+            font-weight: bold;
+          }
         } //form
       } //pageContent
       footer {

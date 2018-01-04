@@ -1,18 +1,16 @@
 import Ember from 'ember';
-
+import { computed } from '@ember/object';
 export default Ember.Component.extend({
-
+    classNameBindings:['class_focused'],
     class_focused :'',
     actions:{
-        // focus :function(state){
-        //     (state) ? this.set('class_focused','focus') : this.set('class_focused','')
-        // },
+
                 focus :function(state,val){ 
-            // //set focused true or false
+
             if(state){
                 this.set('class_focused','focused')
             } else{
-                   //if not focused anymore but input not empty
+
                if(val !=""){   
     
                     this.set('class_focused','focused')

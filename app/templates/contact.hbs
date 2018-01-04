@@ -8,40 +8,23 @@
         <p class="phrase">If you need Smith And Williams assistance in the digitalisaton of your business or simply want to have a drink, contact
             us.
         </p>
-        {{#validated-form on-submit = (action "submit") as |f|}}
+        <form>
 
-        <div class="fieldsRow">
+            <div class="fieldsRow">
 
-            <p class="error">{{#f.input name="firstName" }}            
-         
-                {{material-input type="text" materialId="firstName" required="required" name="firstName" label="First name"}}
-                {{/f.input}}
-                <span class="errorMsg">This field can't be empty</span>
-            </p>
-            <p>{{#f.input name="lastName"}} 
-                 {{material-input type="text" materialId="lastName" required="required" name="lastName" label="Last name"}}  
-                {{/f.input}}
-                <span class="errorMsg">This field can't be empty</span>
-            </p>
-
-            <p>{{#f.input name="email"}} 
-                  {{material-input type="email" materialId="email" required="required" name="email" label="Email"}}  
-               {{/f.input}}
-                <span class="errorMsg">This field can't be empty</span>
-            </p>
-
-        </div>
-        <div class="fieldsRow">
-            <p class="textarea">{{#f.input name="message"}}
+                {{material-input type="text" materialId="firstName" required="required" name="firstName" label="First name"}} {{material-input
+                type="text" materialId="lastName" required="required" name="lastName" label="Last name"}} {{material-input
+                type="email" materialId="email" required="required" name="email" label="Email"}}
+            </div>
+            <div class="fieldsRow">
                 {{material-input type="textarea" materialId="message" required="required" name="message" label="Message"}}
-                {{/f.input}}</p>
-        </div>
 
-        <p>{{f.input type="checkbox" label="Check if you want to receive further message from Smith And Williams" name="optin"}}
-        </p>
-        <p>{{f.submit label="Send" class="button"}} </p>
+            </div>
 
-        {{/validated-form}}
+            {{f.input type="checkbox" label="Check if you want to receive further message from Smith And Williams" name="optin"}} {{f.submit
+            label="Send" class="button"}}
+
+        </form>
     </div>
 
 </div>

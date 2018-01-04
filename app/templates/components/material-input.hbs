@@ -1,10 +1,5 @@
-{{#if (eq type "textarea" )}}
-    {{textarea id=materialId name=name required="required" focus-in=(action "focus" true) focus-out=(action "focus" false) class=class_focused}}
-{{else}}
-    {{#if required}}
-    {{input type=type id=materialId name=name required="required" focus-in=(action "focus" true) focus-out=(action "focus" false) class=class_focused}}
-    {{else}}
-    {{input type=type id=id name=name focus-in=(action "focus" true) focus-out=(action "focus" false) class=class_focused}}
-    {{/if}}
-{{/if}}
+{{#if (eq type "textarea" )}} {{textarea id=materialId name=name required="required" focus-in=(action "focus" true) focus-out=(action
+"focus" false) }} {{else}} {{#if required}} {{input type=type id=materialId name=name required="required" focus-in=(action
+"focus" true) focus-out=(action "focus" false) }} {{else}} {{input type=type id=id name=name focus-in=(action "focus" true)
+focus-out=(action "focus" false) }} {{/if}} {{/if}}
 <label for={{materialId}}>{{label}}</label>

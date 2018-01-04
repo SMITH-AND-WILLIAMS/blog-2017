@@ -1,0 +1,26 @@
+div {
+  position: relative;
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"] {
+    border: 0;
+    border-bottom: 2px solid $grey600;
+    outline: none;
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+  }
+  label {
+    display: block;
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+    cursor: pointer;
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+  }
+  &.focused {
+    border-bottom-color: $emberA400;
+    label {
+      top: -20px;
+      font-size: 16px;
+    }
+  }
+}
