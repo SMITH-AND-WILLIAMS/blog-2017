@@ -1,26 +1,80 @@
-div {
-  position: relative;
-  input[type="text"],
-  input[type="tel"],
-  input[type="email"] {
-    border: 0;
-    border-bottom: 2px solid $grey600;
-    outline: none;
-    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
-  }
-  label {
-    display: block;
-    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
-    cursor: pointer;
-    position: absolute;
-    pointer-events: none;
-    top: 0;
-  }
-  &.focused {
-    border-bottom-color: $emberA400;
-    label {
-      top: -20px;
-      font-size: 16px;
+form{
+  .fieldsRow{
+    div {
+
+      position: relative;
+      input[type="text"],
+      input[type="tel"],
+      input[type="email"] {
+        border: 0;
+        border-bottom: 2px solid $grey600;
+        outline: none;
+        transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+      }
+
+      label {
+        display: block;
+        transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+        cursor: pointer;
+        position: absolute;
+        pointer-events: none;
+        top: 0;
+        font-size:20px;
+        color: $grey800;
+        font-weight:300;
+      }
+      &.focused {
+        input{
+          border-bottom-color: $emberA400;
+        }
+        label {
+          top: -20px;
+          font-size: 16px;
+    
+    
+        }
+        
+      }
+      &.leftFocused {
+        label {
+          top: -20px;
+          font-size: 16px;
+    
+    
+        }
+      }
+    }
+    &.textarea {
+     div{
+      textarea {
+        border: 0px solid #fff;
+        border-bottom: 2px solid $grey600;
+        width: 100%;
+        outline: none;
+        
+       
+      }
+      &.focused {
+        textarea {
+        border-bottom-color: $emberA400;
+        
+        }
+        label{
+          top:-25px;
+          font-size: 16px;
+        }
+       }
+       &.leftFocused {
+        label {
+          top: -25px;
+          font-size: 16px;
+    
+    
+        }
+      }
+     }
+      
     }
   }
 }
+

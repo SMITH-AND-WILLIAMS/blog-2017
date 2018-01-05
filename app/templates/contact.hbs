@@ -16,14 +16,17 @@
                 type="text" materialId="lastName" required="required" name="lastName" label="Last name"}} {{material-input
                 type="email" materialId="email" required="required" name="email" label="Email"}}
             </div>
-            <div class="fieldsRow">
+            <div class="fieldsRow textarea">
                 {{material-input type="textarea" materialId="message" required="required" name="message" label="Message"}}
 
             </div>
-
-            {{f.input type="checkbox" label="Check if you want to receive further message from Smith And Williams" name="optin"}} {{f.submit
-            label="Send" class="button"}}
-
+            <p>
+                {{input type="checkbox" name="optin" id="optin"}}
+                <label for="optin" class="checkboxLabel">Check if you want to receive further message from Smith And Williams</label>
+            </p>
+            <p>
+                {{input type="submit" value="Send" class="button"}}
+            </p>
         </form>
     </div>
 

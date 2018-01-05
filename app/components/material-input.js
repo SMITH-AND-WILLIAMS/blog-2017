@@ -13,7 +13,7 @@ export default Ember.Component.extend({
 
                if(val !=""){   
     
-                    this.set('class_focused','focused')
+                    this.set('class_focused','leftFocused')
                 }  else{
                     this.set('class_focused','')
                 }
